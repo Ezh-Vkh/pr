@@ -7,7 +7,6 @@ option(BUILD_TESTS "Build tests" ON)
 
 if(BUILD_TESTS)
   enable_testing()
-  add_compile_options(--coverage)
   add_executable(check tests/tests.cpp)
   include_directories(./)
   target_link_libraries(check gtest gtest_main)
