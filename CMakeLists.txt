@@ -10,7 +10,7 @@ if(BUILD_TESTS)
   add_compile_options(--coverage)
   add_executable(check tests/tests.cpp)
   include_directories(./)
-  target_link_libraries(check  gtest_main)
+  target_link_libraries(check gtest gtest_main)
 endif()
 set(SOURCES
     program.cpp
