@@ -3,11 +3,15 @@ project(ChainOfResponsibilityPattern)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-option(BUILD_TESTS "Build tests" OFF)
+option(BUILD_TESTS "Build tests" ON)
 
 if(BUILD_TESTS)
+  enable_testing()
   add_compile_options(--coverage)
+  add_executable(check tests/tests.cpp)
+  target_link_libraries(check  gtest_main)
 endif()
 set(SOURCES
     program.cpp
 )
+add_executable(prog program.cpp)
