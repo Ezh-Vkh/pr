@@ -9,5 +9,5 @@ if(BUILD_TESTS)
   add_compile_options(--coverage)
 endif()
 set(SOURCES
-    main.cpp
+    program.cpp
 )
