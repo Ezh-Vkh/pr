@@ -1,3 +1,5 @@
+#include <gtest/gtest.h>
+#include "app.h"
 
 TEST(ATEST, BTEST) {
     int a = 8;
